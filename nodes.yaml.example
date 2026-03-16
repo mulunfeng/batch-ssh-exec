@@ -1,0 +1,30 @@
+# 批量远程命令执行工具配置文件示例
+# 复制此文件为 nodes.yaml 并修改为你的实际配置
+
+nodes:
+  - name: "web-server-1"
+    host: "192.168.1.10"
+    port: 22
+    # 使用普通用户登录
+    username: "Mike"
+    # 使用SSH密钥认证
+    private_key: "~/.ssh/id_rsa"
+    # sudo切换到root的密码
+    sudo_password: "your_password_herenk"
+    # 可选：指定sudo用户（默认root）
+    # sudo_user: "root"
+
+  - name: "web-server-2"
+    host: "192.168.1.102"
+    port: 22
+    username: "Mike"
+    private_key: "~/.ssh/id_rsa"
+    sudo_password: "your_root_password"
+
+# 全局设置
+settings:
+  timeout: 30  # SSH连接超时时间（秒）
+  parallel: true  # 是否并行执行
+  max_workers: 5  # 最大并行数
+  # 全局sudo密码（可被节点单独配置覆盖）
+  # sudo_password: "global_password"

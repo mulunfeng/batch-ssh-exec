@@ -1,0 +1,15 @@
+# 批量远程命令执行工具配置文件示例
+# 复制此文件为 nodes.yaml 并修改为你的实际配置
+
+nodes:
+  - name: "web-server-1"
+    host: "192.168.1.10"
+    port: 22
+    username: "root"
+    password: "youpassword"
+
+# 全局设置
+settings:
+  timeout: 30  # SSH连接超时时间（秒）
+  parallel: true  # 是否并行执行
+  max_workers: 5  # 最大并行数
