@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific - test outputs
+anomaly_report.json
+baseline.json
+final_*.json
+final_*.prom
+final_*.html
+log_analysis.json
+performance_report.*
+predictions.json
+prometheus_metrics.txt
+stats_report.json
+test_history.json
+test_log.log
+test_nodes.yaml
+test_nodes.yaml.encrypted
+test_report.html
+test_workflow.yaml
+multi_nodes.yaml
+multi_test.json
